@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RunningCoach implements Coach {
 
+	// field injection
+	@Autowired
 	private FortuneService fortuneService;
 	
 	
@@ -23,11 +25,11 @@ public class RunningCoach implements Coach {
 //	}
 
 	
-	@Autowired
-	public void doSomeCrazyStuff(FortuneService fortuneService) {
-		System.out.println(">> RunningCoach: inside doSomeCrazyStuff() method");
-		this.fortuneService = fortuneService;
-	}
+//	@Autowired
+//	public void doSomeCrazyStuff(FortuneService fortuneService) {
+//		System.out.println(">> RunningCoach: inside doSomeCrazyStuff() method");
+//		this.fortuneService = fortuneService;
+//	}
 
 	
 	@Override
