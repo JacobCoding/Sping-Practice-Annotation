@@ -9,11 +9,11 @@ public class TennisCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	
-	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
-		System.out.println(">> inside TennisCoach default constructor");
-	}
+//	@Autowired
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//		System.out.println(">> inside TennisCoach default constructor");
+//	}
 	
 	@Override
 	public String getDailyWorkout() {
