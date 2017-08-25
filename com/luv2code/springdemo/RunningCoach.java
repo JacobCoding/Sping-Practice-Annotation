@@ -15,18 +15,21 @@ public class RunningCoach implements Coach {
 	}
 	
 	
-	// define a setter method
+//	// define a setter method
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		System.out.println(">> RunningCoach: inside setFortuneService");
+//		this.fortuneService = fortuneService;
+//	}
+
+	
 	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println(">> RunningCoach: inside setFortuneService");
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println(">> RunningCoach: inside doSomeCrazyStuff() method");
 		this.fortuneService = fortuneService;
 	}
 
-
-
-
-
-
+	
 	@Override
 	public String getDailyWorkout() {
 		

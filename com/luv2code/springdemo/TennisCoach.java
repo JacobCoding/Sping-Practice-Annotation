@@ -12,6 +12,7 @@ public class TennisCoach implements Coach {
 	@Autowired
 	public TennisCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
+		System.out.println(">> inside TennisCoach default constructor");
 	}
 	
 	@Override
