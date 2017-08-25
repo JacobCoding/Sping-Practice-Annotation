@@ -22,13 +22,14 @@ public class AnnotationDemoApp {
 
 		// call method to get the daily fortune
 		System.out.println(theCoach.getDailyFortune());
+		System.out.println(theCoach1.getDailyFortune());
 		
 		
 		//close the context
 		context.close();
 		
 		
-		String a = "spoko";
+		
 
 	}
 
