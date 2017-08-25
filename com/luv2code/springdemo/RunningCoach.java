@@ -1,12 +1,15 @@
 package com.luv2code.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class RunningCoach implements Coach {
 
 	// field injection
@@ -19,6 +22,21 @@ public class RunningCoach implements Coach {
 	public RunningCoach() {
 		System.out.println(">> inside default constructor of RunningCoach");
 	}
+	
+	
+	//define my init methd
+	@PostConstruct
+	public void doMyStastup() {
+		System.out.println(">> RunningCoach: inside of doMyStartupStuff() ");
+	}
+	
+	// define my destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> RunningCoach: inside of doMyCleanupStuff() ");
+	}
+	
+	
 	
 	
 //	// define a setter method
